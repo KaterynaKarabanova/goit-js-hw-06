@@ -1,11 +1,9 @@
 const categories = document.querySelectorAll(`.item`)
-console.log(categories);
-
 console.log(`Number of categories: ${categories.length}`);
-const title = document.querySelector(`.item > h2`)
-console.log(`Category: ${title.textContent}`);
-const nestedUl = document.querySelector("#categories .item ul");
+categories.forEach(category => {
+  let categoryName = category.querySelector('h2').textContent;
+  let elements = category.querySelectorAll('li').length;
 
-const liCount = nestedUl.getElementsByTagName("li").length;
-console.log(`Elements: ${liCount}`);
-
+  console.log(`Category: ${categoryName}`);
+  console.log(`Elements: ${elements}`);
+});

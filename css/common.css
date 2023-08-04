@@ -36,3 +36,9 @@ button {
   border-width: 10px;
   border-color: rgb(5, 145, 75);
 }
+#boxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 600px;
+}

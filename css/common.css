@@ -11,6 +11,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+ 
 }
 
 input {
@@ -35,10 +36,4 @@ button {
   border-style: dashed;
   border-width: 10px;
   border-color: rgb(5, 145, 75);
-}
-#boxes {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 600px;
 }

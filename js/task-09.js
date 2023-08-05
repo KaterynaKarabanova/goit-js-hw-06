@@ -8,8 +8,9 @@ const bodyEl = document.querySelector("body")
 const changeColorBtn = document.querySelector(".change-color")
 const spanColor = document.querySelector(".color")
 function changeColor() {
-  bodyEl.style.backgroundColor = getRandomHexColor()
-  spanColor.textContent = `${getRandomHexColor()}`
+  let colorRandom = getRandomHexColor()
+  bodyEl.style.backgroundColor = colorRandom
+  spanColor.textContent = `${colorRandom}`
 }
 
 changeColorBtn.addEventListener("click", changeColor)

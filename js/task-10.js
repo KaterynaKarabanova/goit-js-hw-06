@@ -11,20 +11,22 @@ const createEL = document.querySelector('button[data-create]');
 const destroyEl = document.querySelector('button[data-destroy]');
 const inputField = document.querySelector("input")
 
-
+let size = 30
 function createBoxes() {
   let amount = Number(inputField.value);
   const boxes = []
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement(`div`)
-    const size = 30 + i * 10
+    
+    size +=10
     box.style.width = `${size}px`
     box.style.height = `${size}px`
     box.style.backgroundColor = `${getRandomHexColor()}`
     boxes.push(box)
   }
   divBox.append(...boxes)
+   inputField.value = "";
 }
 function destroyBoxes() {
     divBox.innerHTML = '';
@@ -32,4 +34,6 @@ function destroyBoxes() {
 
 createEL.addEventListener("click", createBoxes)
 destroyEl.addEventListener("click", destroyBoxes)
+
+
 
